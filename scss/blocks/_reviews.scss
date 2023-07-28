@@ -1,0 +1,178 @@
+.reviews {
+      padding: 180px 0 200px 0;
+      @media screen and (max-width: 767.98px) {
+            padding: 20px 0 60px 0;
+      }
+      // .reviews__container
+      &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+      }
+      // .reviews__header
+      &__header {
+            margin: 0 0 60px 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+      }
+      // .reviews__heading
+      &__heading {
+            text-align: center;
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 3.15px;
+            text-transform: uppercase;
+            color: $color-orange;
+      }
+      // .reviews__title
+      &__title {
+      }
+      // .reviews__cards
+      &__cards {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+      }
+      // .reviews__card
+      &__card {
+      }
+}
+.swiper {
+}
+.reviews-swiper {
+      @media screen and (min-width: 320px) {
+            width: 310px;
+      }
+      @media screen and (min-width: 720px) {
+             width: 685px;
+      }
+      @media screen and (min-width: 1060px) {
+            width: 1035px;
+     }
+}
+.swiper-wrapper {
+}
+.reviews-wrapper {
+      // margin: 0 0 0 10px !important;
+      width: 310px !important;
+}
+.swiper-slide {
+}
+.reviews-slide {
+      width: 310px !important;
+      @media screen and (min-width: 720px) {
+            width: 315px !important;
+     }
+}
+.card-reviews {
+      // .card-reviews__image
+      &__image {
+            position: relative;
+            width: 340px;
+            height: 514px;
+            & img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+            }
+            @media screen and (min-width: 320px) {
+                  width: 295px;
+            }
+      }
+      // .card-reviews__content
+      &__content {
+            height: 206px;
+            padding: 0 30px 0 30px;
+            position: absolute;
+            bottom: 90px;
+            left: 15px;
+
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18.118px;
+            background-color: rgba(255, 255, 255);
+            @media screen and (min-width: 320px) {
+                  padding: 0 10px 0 10px;
+            }
+      }
+      // .card-reviews__avatar
+      &__avatar {
+            position: absolute;
+            top: -33px;
+            left: 50%;
+            transform: translateX(-50%);
+      }
+      // .card-reviews__name
+      &__name {
+            margin: 0 0 6px 0;
+
+            text-align: center;
+            font-size: 1.125rem;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: capitalize;
+            color: $color-main;
+      }
+      // .card-reviews__subtitle
+      &__subtitle {
+            margin: 0 0 22px 0;
+
+            text-align: center;
+            font-size: 0.75rem;
+            line-height: normal;
+            opacity: 0.6;
+            color: $color-main;
+      }
+      // .card-reviews__text
+      &__text {
+            margin: 0 0 22px 0;
+            max-width: 252px;
+
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: normal;
+
+            opacity: 0.8;
+            color: $color-main;
+      }
+      // .card-reviews__rate
+      &__rate {
+      }
+}
+.reviews-button-prev {
+      position: absolute;
+      top: 120px;
+      left: -12px;
+      width: 50px;
+      height: 50px;
+      background: url('../img/product/arrow-left.svg') center no-repeat;
+      z-index: 200;
+      border-radius: 26px;
+      background-color: #FFF;
+      box-shadow: 0px 7.03125px 19.53125px 0px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+}
+.reviews-button-next {
+      position: absolute;
+      top: 120px;
+      right: -6px;
+      width: 50px;
+      height: 50px;
+      background: url('../img/product/arrow-right.svg') center no-repeat;
+      z-index: 200;
+      border-radius: 26px;
+      background-color: #FFF;
+      box-shadow: 0px 7.03125px 19.53125px 0px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+}

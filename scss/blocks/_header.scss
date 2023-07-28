@@ -1,0 +1,217 @@
+.header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 5;
+      // .header__container
+      &__container {
+            min-height: 115px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+      }
+      // .header__logo
+      &__logo {
+            font-size: 1.75rem;
+            font-weight: 600;
+            line-height: 1.14;
+            letter-spacing: 0.28px;
+            text-transform: capitalize;
+            color: $color-white;
+            @media screen and (max-width: 767.98px) {
+                  position: relative;
+                  z-index: 10;
+            }
+      }
+      // .header__nav
+      &__nav {
+            display: block;
+            @media screen and (max-width: 767.98px) {
+                  &--active {
+                        left: 0;
+                  }
+                  padding: 200px 30px 30px 30px;
+                  position: fixed;
+                  top: 0;
+                  left: 100%;
+                  width: 100%;
+                  height: 100vh;
+                  overflow: auto;
+
+                  transition: left .2s ease-in;
+                  background-color: rgba(30, 30, 30, 0.945);
+            }
+      }
+      // .header__list
+      &__list {
+            display: flex;
+            align-items: center;
+            column-gap: 65px;
+            @media screen and (max-width: 767.98px) {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  row-gap: 120px;
+            }
+      }
+      // .header__item
+      &__item {
+            position: relative;
+      }
+      // .header__link
+      &__link {
+            display: flex;
+            align-items: center;
+
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.14;
+            transition: color .2s ease-in;
+            color: $color-white;
+            @media screen and (max-width: 767.98px) {
+                  font-size: 1.5rem;
+            }
+
+            &:hover {
+                  color: $color-orange;
+            }
+            & svg path {
+                  transition: fill .2s ease-in;
+            }
+            &:hover svg path {
+                  fill: $color-orange;
+            }
+      }
+      &__arrow {
+            margin: 0 0 0 8px;
+
+            width: 18px;
+            height: 18px;
+
+            transition: transform .2s ease-in;
+            &--active {
+                  transform: rotate(180deg);
+            }
+      }
+      // .header__dropdown-list
+      &__dropdown-list {
+            padding: 10px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+
+
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            transition: all .2s ease-in;
+            opacity: 0;
+            visibility: hidden;
+            border-radius: 10px;
+            border: 0.862px solid rgba(255, 255, 255, 0.60);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+
+            &--active {
+                  opacity: 1;
+                  visibility: visible;
+            }
+      }
+      // .header__dropdown-item
+      &__dropdown-item {
+      }
+      // .header__dropdown-link
+      &__dropdown-link {
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.14;
+            -webkit-transition: color 0.2s ease-in;
+            transition: color 0.2s ease-in;
+            color: $color-white;
+
+            &:hover {
+                  color: $color-orange;
+            }
+      }
+      .header__actions {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+      }
+      // .header__cart
+      &__cart {
+            position: relative;
+      }
+      &__burger {
+            @media screen and (max-width: 767.98px) {
+                  position: relative;
+                  width: 30px;
+                  height: 24px;
+                  cursor: pointer;
+                  & span {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%) scale(1);
+                        left: 0;
+                        width: 100%;
+                        height: 12%;
+                        transition: all .2s ease-in;
+                        background-color: $color-white;
+                  }
+                  &::after,
+                  &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        height: 12%;
+                        transition: all .2s ease-in;
+                        background-color: $color-white;
+                  }
+
+                  &::after {
+                        top: 0;
+                  }
+                  &::before {
+                        bottom: 0;
+                  }
+
+                  &--active span {
+                        top: 50%;
+                        transform: translateY(-50%) scale(0);
+                  }
+                  &--active::after {
+                        top: 50%;
+                        transform: translateY(-50%) rotate(45deg);
+                  }
+                  &--active::before {
+                        bottom: 50%;
+                        transform: translateY(50%) rotate(-45deg);
+                  }
+            }
+      }
+            
+}
+.cart {
+      // .cart__img
+      &__img {
+      }
+      // .cart__counter
+      &__counter {
+            padding: 3px;
+            position: absolute;
+            top: 4px;
+            right: -4px;
+
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 1.14;
+            color: $color-white;
+            background-color: #E58411;
+            border-radius: 15px;
+      }
+}

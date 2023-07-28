@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Inter:wght@400;600&display=swap');
+body {
+  font-family: $font-main;
+  background-color: $color-bg;
+  color: $color-main;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: auto;
+}
+
+[class*=__container] {
+  max-width: 1315px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-right {
+  padding-right: calc((100% - 1315px) / 2);
+}
+.container-left {
+  padding-left: calc((100% - 1315px) / 2);
+}
+
+.title {
+  font-size: 2.625rem;
+  font-weight: 700;
+  line-height: normal;
+
+  color: $color-main;
+  @media screen and (max-width: 535px) {
+    font-size: 1.825rem;
+  }
+}
+.no-scroll {
+  overflow: hidden;
+}
+/* ============== BUTTON ============== */
+.btn {
+  padding: 0 61px 0 0;
+  position: relative;
+
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.85; /* 25.9px */
+  transition: color .2s ease-in;
+
+  color: $color-orange;
+
+  &:hover {
+        color: rgba(229, 134, 17, 0.624);
+  }
+
+  &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        transition: right .2s ease-in;
+        width: 48px;
+        height: 24px;
+        background: url('../img/choose/arrow.svg') no-repeat;
+  }
+
+  &:hover::after {
+        right: -5px;
+  }
+  &--font {
+    font-size: 1.125rem;
+  }
+}
+
+/* ============== /BUTTON ============== */
+
+/* ============== BURGER ============== */
+
+/* ============== /BURGER ============== */
